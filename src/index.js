@@ -21,18 +21,37 @@ const material_space = new THREE.MeshPhongMaterial({color: 0xffffff});
 const space = new THREE.Mesh(geometry_space, material_space);
 scene.add(space);
 
-// Cube
+// Geometric figure to be represented in the Metaverse: Cube
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
 const material = new THREE.MeshPhongMaterial( { color: 0x090979 } );
 const cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
-camera.position.z = 5;
+
+// Geometric figure to be represented in the Metaverse: Cone
+const geometry_cone = new THREE.ConeGeometry( 5, 20, 32 );
+const material_cone = new THREE.MeshPhongMaterial( {color: 0xed810a} );
+const cone = new THREE.Mesh( geometry_cone, material_cone );
+cone.position.set(-10, 5, 0);
+scene.add( cone );
+
+// Geometric figure to be represented in the Metaverse: Cone
+const geometry_cylinder = new THREE.CylinderGeometry( 5, 5, 5, 32 );
+const material_cylinder = new THREE.MeshPhongMaterial( {color: 0xEE82EE} );
+const cylinder = new THREE.Mesh( geometry_cylinder, material_cylinder );
+cylinder.position.set(20, 5, 0);
+scene.add( cylinder );
 
 camera.position.set(10, 5, 40);
 
 function animate() {
     cube.rotation.x += 0.05;
     cube.rotation.y += 0.05;
+
+    cone.rotation.x += 0.01;
+    cone.rotation.y += 0.01;
+
+    cylinder.rotation.x += 0.05;
+
 	requestAnimationFrame( animate );
 	renderer.render( scene, camera );
 }
