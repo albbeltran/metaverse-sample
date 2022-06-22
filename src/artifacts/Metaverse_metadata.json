@@ -796,11 +796,11 @@
 			]
 		},
 		"src/Metaverse.sol": {
-			"keccak256": "0x64eeec30af29f9fab64bcea16cf1e1f816886ed06a9f69218e54c239de1d8f7b",
+			"keccak256": "0xfd5bd6a1f36f4ba62fb0cfbb3801575b0487dc1925959f57b28d7e4984060649",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0403e33240add4e45b2b197b59b6b3182f53a674779406572eb4d4163f990041",
-				"dweb:/ipfs/QmQqPL2ZhhmwhLGiUJ4VisXesLRvsXpi3MWBxfCH7MY6Gx"
+				"bzz-raw://a70cc02a887929bfa9e9abffb8c1b116c81ddb46eeeeffaa0865001b94c9d031",
+				"dweb:/ipfs/QmbTy9Maud8XMzkzWvxngnvRq6ezp4ykSyjjyDyDQXuS7H"
 			]
 		}
 	},
