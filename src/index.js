@@ -105,9 +105,11 @@ function mintNFT() {
     let web3 = new Web3(window.ethereum);
     let contract = new web3.eth.Contract(abi, "0x31Bd482595A49a4A8E8f19A00fb1829BfCd0C231");
 
-    web3.eth.requestAccounts().then(accounts => {
-        contract.methods.mint(nft_name, nft_width, nft_height, nft_depth, nft_x, nft_y, nft_z).send({from: accounts[0]}).then(data => {
-            console.log("-> NFT available in the Metaverse!");
+    web3.eth.requestAccounts().then((accounts) => {
+        contract.methods.cost().call().then((cost_nft) => {
+            contract.methods.mint(nft_name, nft_width, nft_height, nft_depth, nft_x, nft_y, nft_z).send({ from: accounts[0], value: parseInt(cost_nft) }).then((data) => {
+                alert("NFT available in the Metaverse!");
+            });
         });
     });
 }
